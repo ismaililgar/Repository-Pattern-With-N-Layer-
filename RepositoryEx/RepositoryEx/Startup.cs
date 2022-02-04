@@ -32,7 +32,7 @@ namespace RepositoryEx
         {
             services.AddTransient<IGenericRepository<Authors>, GenericRepository<Authors>>();
             services.AddTransient<IGenericRepository<Books>, GenericRepository<Books>>();
-            services.AddTransient<IGenericRepository<Publisher>, GenericRepository<Publisher>>();
+            services.AddTransient<IGenericRepository<Publishers>, GenericRepository<Publishers>>();
             services.AddDbContext<ApplicationDbContext>(_ => _.UseSqlServer(
                 Configuration.GetConnectionString("DefaultConnection")
                 ));

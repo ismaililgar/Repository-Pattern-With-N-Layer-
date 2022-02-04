@@ -9,10 +9,11 @@ namespace EntityLayer.Entities
 {
     public class Books
     {
-        [Key] public int BookId { get; set; }
+        [Key]
+        public int BookId { get; set; }
         public string BookName { get; set; }
         public int NumOfPages { get; set; }
         public virtual Authors Authors { get; set; }
-        public virtual Publisher Publisher { get; set; }
+        public virtual Publishers Publisher { get; set; }
     }
 }

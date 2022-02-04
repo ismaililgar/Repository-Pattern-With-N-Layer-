@@ -65,7 +65,7 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("EntityLayer.Entities.Publisher", b =>
+            modelBuilder.Entity("EntityLayer.Entities.Publishers", b =>
                 {
                     b.Property<int>("PublisherId")
                         .ValueGeneratedOnAdd()
@@ -80,7 +80,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("PublisherId");
 
-                    b.ToTable("Publisher");
+                    b.ToTable("Publishers");
                 });
 
             modelBuilder.Entity("EntityLayer.Entities.Books", b =>
@@ -89,7 +89,7 @@ namespace DataAccessLayer.Migrations
                         .WithMany()
                         .HasForeignKey("AuthorsAuthorId");
 
-                    b.HasOne("EntityLayer.Entities.Publisher", "Publisher")
+                    b.HasOne("EntityLayer.Entities.Publishers", "Publisher")
                         .WithMany()
                         .HasForeignKey("PublisherId");
 

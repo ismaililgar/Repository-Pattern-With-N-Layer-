@@ -19,7 +19,7 @@ namespace DataAccessLayer
         }
         public virtual DbSet<Authors> Authors { get; set; }
         public virtual DbSet<Books> Books { get; set; }
-        public virtual DbSet<Publisher> Publisher { get; set; }
+        public virtual DbSet<Publishers> Publishers { get; set; }
 
     }
 }
