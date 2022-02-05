@@ -13,10 +13,10 @@ namespace BusinessLayer
     {
         private IGenericRepository<Books> _repository;
         public BooksManager(IGenericRepository<Books> repository) => _repository = repository;
-        public IEnumerable<Books> GetBooks()
+       /* public IEnumerable<Books> GetBooks()
         {
             return _repository.GetAll("Authors", "Publisher");
-        }
+        } */
 
 
 

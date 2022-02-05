@@ -24,10 +24,7 @@ namespace DataAccessLayer
             return _context.Set<TEntity>().Find(id);
         }
 
-        public IEnumerable<TEntity> GetAll(string a1, string a2)
-        {
-            return _context.Set<TEntity>().Include(a1).Include(a2);
-        }
+
 
         public IEnumerable<TEntity> GetAllPart()
         {

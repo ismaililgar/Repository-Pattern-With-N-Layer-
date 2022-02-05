@@ -36,7 +36,7 @@ namespace RepositoryEx.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteBook(int id)
         {
-            var t = _repository.GetAll("Authors", "Publishers").FirstOrDefault(x => x.BookId == id);
+            var t = _repository.GetAllPart().FirstOrDefault(x => x.BookId == id);
             if (t != null) { _repository.Delete(id); return Ok(); }
             else { return BadRequest(); }
         }
@@ -45,7 +45,7 @@ namespace RepositoryEx.Controllers
         [HttpPost]
         public async Task<IActionResult> SetBooks(Books books)
         {
-            if (_repository.GetAll("Authors", "Publishers").FirstOrDefault(x => x.BookName == books.BookName) == null)
+            if (_repository.GetAllPart().FirstOrDefault(x => x.BookName == books.BookName) == null)
             {
                 _repository.Insert(books);
                 return Ok();
